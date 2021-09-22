@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class account(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    phone = models.PositiveIntegerField()
+    phone = models.CharField(max_length=15)
     addres = models.TextField(max_length=100)
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=100)
