@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}User Singup{% endblock title %}
+
+{% block body %}
+  <!-- #################### -->
+<div class="container" data-aos="flip-left" data-aos-offset="490" data-aos-duration="2000" style="margin-top: 70px;">
+    <div class="row">
+        <h4>Register</h4>
+    <div class="col-md-7 mt-3" style="background-color: rgb(0, 0, 0); padding-bottom: 8px; color: cornsilk;">
+
+      <form method="post" action="">
+        {% csrf_token %}
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+      <label for="fname">First Name</label>
+      <input type="text" class="form-control" id="fname" name="fname" placeholder="enter First name" required>
+      <label for="lname">Last Name</label>
+      <input type="text" class="form-control" id="lname" name="lname" placeholder="enter last name">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="enter email" required>
+<!--      <label for="phone">Phone</label>-->
+<!--      <input type="text" class="form-control" id="phone" name="phone" placeholder="enter number" required>-->
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="pass1" placeholder="choice a password" required>
+       <label for="rpassword">Re-Password</label>
+      <input type="password" class="form-control" id="rpassword" name="pass2" placeholder="conform password" required>
+      <input type="submit" class="w-25 my-3 btn btn-secondary " value="sing up">
+      <a href="{% url 'singin' %}" class="w-25 my-3 btn btn-primary">Log In</a>
+ </form>
+
+    </div>
+ 
+</div>
+</div>
+
+  <!-- ######################### -->
+{% endblock body %}

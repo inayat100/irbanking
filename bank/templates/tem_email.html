@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}User notifacations{% endblock title %}
+ {% block body %}
+{% if otp %}
+<h2 style="text-align: center;">Welcome!</h2>
+<h1 style="background-color: rgb(46, 40, 40); color: rgb(255, 255, 255); text-align: center; border-radius: 20%;"> IR Banking</h1>
+<h3 style="color: black;">We're excited to have you get started.First,you need to confirm your account. With this otp</h3>
+<h2 style="border: rgb(40, 185, 221) solid 4px; border-radius: 20%; color: rgb(0, 0, 0); font-size: 20px; text-align: center; font-weight: inherit;">{{otp}}</h2>
+<h5>If you have any questions, just reply to his email-- we're always happy to help out.</h5>
+
+{% elif sender %}
+<div class="container" style="border: aqua solid 5px; background-color: azure; padding: 5px;">
+<h2 style="text-align: center;">Welcome!</h2>
+<h1 style="background-color: rgb(46, 40, 40); color: rgb(255, 255, 255); text-align: center; border-radius: 20%;"> IR Banking</h1>
+
+    Paid To:- {{fname}} {{lname}}
+    <hr>
+    Rs:- {{money}}
+    <hr>
+    Debited From- {{account}}
+    <hr>
+    Status- {{status}}
+    <hr>
+    DT-Tm- {{time}}
+    <hr>
+    <b> Important Note:</b> <br> IR Banking or its employees never ask your username 
+    and password and your mails please dont share your any informations
+</div>
+
+{% elif resever %}
+<div class="container" style="border: aqua solid 5px; background-color: azure; padding: 5px;">
+<h2 style="text-align: center;">Welcome!</h2>
+<h1 style="background-color: rgb(46, 40, 40); color: rgb(255, 255, 255); text-align: center; border-radius: 20%;"> IR Banking</h1>
+
+    Received From:- {{fname}} {{lname}}
+    <hr>
+    Rs:- {{money}}
+    <hr>
+    Credited To- {{account}}
+    <hr>
+    Status- {{status}}
+    <hr>
+    DT-Tm- {{time}}
+    <hr>
+   <b> Important Note:</b> <br> IR Banking or its employees never ask your username 
+    and password and your mails please dont share your any informations
+</div>
+{% elif reset %}
+
+<div class="container" style="border: aqua solid 5px; background-color: azure; padding: 5px;">
+    <h2 style="text-align: center;">Welcome!</h2>
+    <h1 style="background-color: rgb(46, 40, 40); color: rgb(255, 255, 255); text-align: center; border-radius: 20%;"> IR Banking</h1>
+<b style="font-size: 15px;">Hi {{name}},</b>
+<br>
+There was a request to forget your password!
+<br>
+If you did not make this request then please ignore this email.
+<br>
+Otherwise, please click this link to change your password: 
+<br>
+<hr>
+
+<a href="http://127.0.0.1:8000/resetpassword/{{token}}/" style="text-decoration: none; background-color: brown; color: darkblue; font-size: 15px; border: darksalmon solid 5px; border-radius: 15%;">Reset Password</a>
+</div>
+{% else %}
+<h2>somethong is wrong here....</h2>
+{% endif %}
+
+ {% endblock body %}

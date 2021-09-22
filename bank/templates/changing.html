@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Reset Password{% endblock title %}
+
+{% block nev %}
+
+{% endblock nev %}
+
+
+
+{% block body %}
+<div class="container mr" style="margin-top: 70px;">
+    <div class="row">
+    <div class="col-md-7 mt-3" style="background-color: rgb(0, 0, 0); padding-bottom: 8px; color: cornsilk;">
+
+<form method="post" action="">
+    {% csrf_token %}
+
+<label for="pass1">Password</label>
+    <input type="password"  class="form-control" name="pass1" id="pass1" placeholder="**********"><br>
+<label for="pass2"> Conform Password</label>
+    <input name="pass2" type="password" class="form-control" id="pass2" placeholder="**********">
+    <input type="hidden" name="user_id" value="{{ user_id }}"><br>
+    <input type="submit" class="form-control my-3 btn btn-secondary" value="Reset Password">
+</form>
+    </div>
+    </div>
+</div>
+{% endblock body %}

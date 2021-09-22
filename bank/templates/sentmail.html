@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Reset Email{% endblock title %}
+
+ {% block nev %}
+
+      {% endblock nev %}
+ {% block body %}
+
+<div class="container mr" style="margin-top: 70px; color:white;">
+    {{ msg }}
+<a href="{% url 'customers' %}">go to back</a>
+</div>
+  {% endblock body %}

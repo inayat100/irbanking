@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}HOME{% endblock title %}
+ {% block nev %}
+
+
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+        </li>
+ {% endblock nev %}
+
+{% block body %}
+
+    <div class="table-responsive  mr" >
+        <b> Total Transactions is {{ conut }}</b>
+
+<table class="table table-dark table-striped ">
+
+
+  <thead class="table-dark">
+    <tr>
+
+
+      <th scope="col">User</th>
+      <th scope="col">Account No</th>
+      <th scope="col">Credit</th>
+      <th scope="col">Debit</th>
+      <th scope="col">Status</th>
+      <th scope="col">Date_Time</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for hi in hs %}
+    <tr>
+
+
+      <td>{{hi.user}}</td>
+      <td>{{hi.acn}}</td>
+      <td>{{hi.crid}}</td>
+      <td>{{hi.dev}}</td>
+      <td>{{hi.action}}</td>
+      <td>{{hi.date_time}}</td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+            </div>
+
+
+
+
+
+
+{% endblock body %}

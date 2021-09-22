@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+
+{% block title %}User Profile{% endblock title %}
+
+ {% block nev %}
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'moneyotp' %}">Send money</a>
+        </li>
+
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'history' %}">History</a>
+        </li>
+
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'passwordchang' %}">Chang Password</a>
+        </li>
+
+
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        </li>
+
+
+      {% endblock nev %}
+ {% block body %}
+  <div class="container mr h-50" style="background-color: bisque; font-size: 20px; font-style: italic;"data-aos="fade-up"
+     data-aos-duration="3000">
+
+    user- <b>{{ pr.user }}</b><br>
+    <hr>
+      Amount- <b> Rs.{{ pr.amount }}</b><br>
+    <hr>
+    First name- {{ us.first_name }}<br>
+    <hr>
+    Last name- {{ us.last_name }}<br>
+    <hr>
+    Email- <b>{{ us.email }}</b><br>
+    <hr>
+    phone- {{ pr.phone }}<br>
+    <hr>
+    addres- {{ pr.addres }}<br>
+    <hr>
+    city- {{ pr.city }}<br>
+    <hr>
+    state- {{ pr.state }}<br>
+    <hr>
+      account- <b>{{ pr.acn }}</b><br>
+    <hr>
+
+    Date Time- {{ pr.date_time }}<br>
+    <hr>
+  </div>
+
+  {% endblock body %}

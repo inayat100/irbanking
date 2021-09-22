@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Employees{% endblock title %}
+ {% block nev %}
+
+
+<li class="nav-item">
+          <a class="nav-link" href="{% url 'customers' %}">Go To Customers Page</a>
+        </li>
+ {% endblock nev %}
+
+{% block body %}
+<div class="container mr">
+<h3>This page only for Bank employees your are only Customers please go to Customers page thank you ...</h3>
+
+</div>
+{% endblock body %}

@@ -1,0 +1,99 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Online Banking{% endblock title %}
+
+{% block body %}
+<div class=" mr mx">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img src="{% static '3.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block d-md-block">
+        <h5 style="color: rgb(11, 247, 255);"> Bank on Your Phone</h5>
+        <h7 style="color: rgb(245, 245, 245);">Most banks offer a mobile app that allows you to more easily take advantage of online banking on your phone.</h7>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static '2.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block d-md-block">
+        <h5 style="color: black;">Meaning of E-Banking</h5>
+        <p style="color: black; font-size: 15px; text-align: center;">E-banking refers to the process of using banking services online over the internet</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static  '1.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block d-md-block">
+        <h7 class="mt-2">Provides 24×7 Service</h7>
+        <p>This is the most important feature of E-banking. E-Banking provides customers with all-time access facility to their accounts.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<div class="container ">
+    <div class="row">
+<div class="col-md-6" data-aos="zoom-out" data-aos-offset="250">
+    <a href="{% url 'customers' %}" class="btn btn-primary w-100 mb-md-5 mt-md-5 mt-2 btt" >Customers</a>
+
+</div>
+<div class="col-md-6 " data-aos="zoom-in-left" data-aos-offset="250">
+   
+<a href="{% url 'employee' %}" class="btn btn-secondary w-100 mt-md-5 mb-md-5 mt-2 btt" >Bank Employees</a>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="card-group">
+<div class="card m-3" style="max-width: 500px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'c1.jpg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">IR Bank</h5>
+        <p class="card-text">Using online banking from Chase can be a great way to manage your finances from the comfort of your own home.</p>
+        <p class="card-text"><small class="text-muted">updating by IR Banking</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card m-3" style="max-width: 500px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'c2.jpg' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">IR Bank</h5>
+        <p class="card-text">There are many online banking institutions that make it very easy to fill out your application online.</p>
+        <p class="card-text"><small class="text-muted">updating by IR Banking</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+   
+<footer class="bg fs-4">
+<p>Copyright © 2020-2021 IRBanking.com</p>
+</footer>
+
+
+
+{% endblock body %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}open account{% endblock title %}
+
+{% block body %}
+  <!-- #################### -->
+<div class="container mr" style="margin-top: 30px;">
+    <div class="row">
+        <h4>Fill your pursunal details</h4>
+    <div class="col-md-7 mt-3" style="background-color: rgb(0, 0, 0); padding-bottom: 8px; color: cornsilk;">
+      <form method="post" action="">
+        {% csrf_token %}
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" name="phone" placeholder="phone number" required>
+      <label for="addres">Addres</label>
+          <textarea id="addres" name="addres" class="form-control" placeholder="enter addres" required></textarea>
+
+      <label for="city">City/town</label>
+      <input type="text" class="form-control" id="city" name="city" placeholder="enter city" required>
+     <label for="state">choice state</label>
+          <select name="state" class="form-control" id="state" required>
+         <option>UtterPradesh</option>
+         <option>Delhi</option>
+         <option>Punjab</option>
+         <option>Odisha</option>
+         <option>Maharashtra</option>
+         <option>MadhyaPradesh</option>
+         <option>JharKhand</option>
+         <option>Goa</option>
+         <option>Gujarat</option>
+         <option>AndhraPradesh</option>
+     </select>
+      <input type="submit" class="form-control my-3 btn btn-secondary" value="sing up">
+ </form>
+    </div>
+
+</div>
+</div>
+
+  <!-- ######################### -->
+{% endblock body %}
