@@ -31,7 +31,7 @@ EMAIL_HOST= "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER ="inayat844127@gmail.com"
 #EMAIL_HOST_PASSWORD = os.environ['PASSWORD']
-EMAIL_HOST_PASSWORD = 'Inayat@123'
+EMAIL_HOST_PASSWORD = '**********'
 EMAIL_USE_TLS = True
 
 
