@@ -36,7 +36,7 @@ EMAIL_USE_TLS = True
 
 
 
-ALLOWED_HOSTS = ['irbank.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
